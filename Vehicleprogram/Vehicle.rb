@@ -26,32 +26,28 @@ end
 module Drivinglicense
 	def drivinglicense
 		puts "Having driving license...?"
-		while (@dl != "yes" || @dl != "no")
-				@dl = gets.chomp.to_s
-		  if (@dl == "yes")
-			  puts "Show me"
-		   elsif (@dl == "no")
-			  puts "You should have pay extra for this violence act"
-		   else
-			  puts "Speak Fastly"
-		  end				
-		end		
+		@dl = gets.chomp.to_s
+		if (@dl == "yes")
+			puts "Show me"
+		elsif (@dl == "no")
+			puts "You should have pay extra for this violence act"
+		else
+			puts "Speak Fastly"
+		end						
 	end	
 end
 
 module Registrationcertificate
 	def registrationcertificate
 		puts "Having Registration certificate...?"
-		while (@rc != "yes" || @rc != "no")
-		  @rc = gets.chomp.to_s
-		  if (@rc == "yes")
-			  puts "Show me"
-		   elsif (@rc == "no")
-			  puts "You should have pay extra for this violence act"
-		  else
-			  puts "Speak Fastly"	
-		  end		
-		end		
+		@rc = gets.chomp.to_s
+		if (@rc == "yes")
+			puts "Show me"
+		elsif (@rc == "no")
+			puts "You should have pay extra for this violence act"
+		else
+			puts "Speak Fastly"	
+		end				
 	end	
 end
 
@@ -64,18 +60,6 @@ require_relative "Car"
 #require "Drivinglicense"
 
 #require "Registrationcertificate"
-
-class Bike < Vehicle
-	include Registrationcertificate
-
-	include Drivinglicense
-end
-
-class Car < Vehicle
-	include Registrationcertificate
-
-	include Drivinglicense
-end
 
 Vehicle.new.officer("Ayush Jain")
 puts ""
