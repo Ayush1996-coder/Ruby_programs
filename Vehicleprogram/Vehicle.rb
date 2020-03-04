@@ -26,7 +26,7 @@ end
 module Drivinglicense
 	def drivinglicense
 		puts "Having driving license...?"
-		while (@dl == "yes" || @dl == "no")
+		while (@dl != "yes" || @dl != "no")
 				@dl = gets.chomp.to_s
 		  if (@dl == "yes")
 			  puts "Show me"
@@ -93,9 +93,9 @@ if $tyre == 4
   puts ""
   Car.car_number
   puts ""
-  Car.new.dl
+  Car.new.drivinglicense
   puts ""
-  Car.new.rc
+  Car.new.registrationcertificate
   puts ""
   Vehicle.new.challan_type(Car.new)
 elsif $tyre ==2
@@ -109,9 +109,9 @@ elsif $tyre ==2
   puts ""
   Bike.bike_number
   puts ""
-  Bike.new.dl
+  Bike.new.drivinglicense
   puts ""
-  Bike.new.rc
+  Bike.new.registrationcertificate
   puts ""
   Vehicle.new.challan_type(Bike.new)
 else
